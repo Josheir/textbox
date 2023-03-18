@@ -31,10 +31,12 @@
     
 
     let gCounter = 1;
+    let letters2 = "";
 
     document.addEventListener('keydown' , function(e){
     //document.write(event.code);
 
+    
     gCounter++;
     
     let keynum;
@@ -51,8 +53,18 @@
 
     
     nextLetter = (String.fromCharCode(keynum));
+    
+    if (nextLetter == ".")
+    {
+        
+        deleteCharacter();
+        return(-1);
+    }
+
     letters.push(nextLetter);
-    let letters2 = letters.join("");
+
+    
+    letters2 = letters.join("");
     
     if (gCounter %35 == 1) 
     {
@@ -71,13 +83,30 @@
     });
 
 
+    function deleteCharacter(){
+        
+        
+            let letters4 = letters.pop(); 
+            if (letters4 == '<br>')
+            {
+                let letters4 = letters.pop();
+                gCounter--;    
+            }
+
+            gCounter--;
+
+            alert(letters);
+            letters2 = letters.join("");
+            document.getElementById('box').innerHTML = letters2;
+    }
+
 
 
     function test(){
     document.getElementById('box').innerHTML = 'test';
     }
 
-    kk
+    
 
 </script>
 
