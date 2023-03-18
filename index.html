@@ -31,7 +31,7 @@
     
 
     let gCounter = 1;
-    let letters2 = "";
+    let lettersWithoutCommas = "";
 
     document.addEventListener('keydown' , function(e){
     //document.write(event.code);
@@ -64,13 +64,13 @@
     letters.push(nextLetter);
 
     
-    letters2 = letters.join("");
+    lettersWithoutCommas = letters.join("");
     
     if (gCounter %35 == 1) 
     {
         
         letters.push('<br>');
-        letters2 = letters.join("");
+        lettersWithoutCommas = letters.join("");
         
         
     }
@@ -78,26 +78,28 @@
         
     
     //let str = toString(letters);
-    document.getElementById('box').innerHTML = letters2;
+    document.getElementById('box').innerHTML = lettersWithoutCommas;
     
     });
 
 
     function deleteCharacter(){
         
-        
-            let letters4 = letters.pop(); 
-            if (letters4 == '<br>')
+            
+
+            let lettersPoppedFrom = letters.pop(); 
+            if (lettersPoppedFrom == '<br>')
             {
-                let letters4 = letters.pop();
-                gCounter--;    
+                let lettersPoppedFrom = letters.pop();
+                //gCounter--; 
+                //gCounter--;   
             }
 
             gCounter--;
-
-            alert(letters);
-            letters2 = letters.join("");
-            document.getElementById('box').innerHTML = letters2;
+            gCounter--;
+            
+            lettersWithoutCommas = letters.join("");
+            document.getElementById('box').innerHTML = lettersWithoutCommas;
     }
 
 
