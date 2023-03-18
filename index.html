@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="box.css">
+
+    
+</head>
+<body>
+   
+    
+
+
+<div id = "box" ></div>
+
+<script>
+    
+    let letters = [];
+    class textbox{
+
+        constructor(){
+
+            let box = document.createElement("div");
+            box.className = "box-Class";     
+            }
+
+        
+}
+    
+
+    let gCounter = 1;
+
+    document.addEventListener('keydown' , function(e){
+    //document.write(event.code);
+
+    gCounter++;
+    
+    let keynum;
+    if(window.e) {
+        keynum = e.keyCode;
+    }
+    else if(e.which){
+        keynum = e.which;
+
+    }
+    keynum = e.which;
+
+    
+
+    
+    nextLetter = (String.fromCharCode(keynum));
+    letters.push(nextLetter);
+    let letters2 = letters.join("");
+    
+    if (gCounter %35 == 1) 
+    {
+        
+        letters.push('<br>');
+        letters2 = letters.join("");
+        
+        
+    }
+
+        
+    
+    //let str = toString(letters);
+    document.getElementById('box').innerHTML = letters2;
+    
+    });
+
+
+
+
+    function test(){
+    document.getElementById('box').innerHTML = 'test';
+    }
+
+    kk
+
+</script>
+
+
+
+
+</body>
+
+</html>
