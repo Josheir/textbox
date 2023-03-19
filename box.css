@@ -1,5 +1,4 @@
-.visibledevice {display:none;}
-.visible
+
 
 body{
 
@@ -10,18 +9,45 @@ body{
     font-size: 6;
     max-width: 1100px;
 }
+
+
 #box
 {
-    font-size: 1.7rem;
+    font-size: 1rem;
     color: whitesmoke;
     background-color:grey;
-    width:250px;
+    width:150px;
     height: 25%;
     color: blue;
     font-family: monospace;
-    margin: auto;
+    margin: 0 auto;
     margin-top:2rem;
     
+    
+}
+
+
+.relative{
+    
+    border-top: 3px solid blue;
+    width:1rem;
+    margin-top: -0.8rem;
+    margin-left: 2rem;
+    
+    
+}
+.test{
+
+    font-size: 10rem;
+    color: red;
+    width:250px;
+    height: 25%;
+
+}
+
+span{
+    display: flex;
+    flex-direction: row;
 }
 
 

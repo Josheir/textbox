@@ -14,7 +14,17 @@
     
 
     <div id = "div2" >2</div>
-<div  id = "box" ></div>
+<div  id = "box" >
+    
+    <p>fadjlslfd;asla;dfl;</p>
+    
+
+    <div  class = "relative" ></div>
+
+</div>
+
+
+
 
 
 <script>
@@ -96,7 +106,7 @@ let div1 = document.createElement("div");
 
     if(nextLetter == '0')
     {
-        alert(nextLetter);
+       // alert(nextLetter);
         advanceArrayOneTime();
         insertCharacter(gCounter-1 , nextLetter);
 
@@ -115,7 +125,7 @@ let div1 = document.createElement("div");
     
     //let s = uscore + a;
 
-    alert(uscore);
+    //alert(uscore);
 
     letters.push(nextLetter);
     
@@ -123,7 +133,7 @@ let div1 = document.createElement("div");
     
     lettersWithoutCommas = letters.join("");
     
-    if (gCounter %35 == 1) 
+    if (gCounter %35 == 1) getelee
     {
         
         letters.push('<br>');
@@ -132,15 +142,24 @@ let div1 = document.createElement("div");
         
     }
 
-    string3 = "<u>" + lettersWithoutCommas[0] +  "</u>";
+    
+    string3 = "<span><u>" + lettersWithoutCommas +  "</u></span>";
 
         
-    alert(lettersWithoutCommas);
+    //alert(lettersWithoutCommas);
     //let str = toString(letters);
     //document.getElementById('box').innerHTML = "<u>{a}</U>";
-        document.getElementById('box').innerHTML = string3;
+        //let id = "box";
+        //innertext 
+        //;
+        //s.value = "qwert"; 
+        document.getElementById('box').innerText = 'awq';
+
+        //document.getElementById('box').innerHTML = string3;
 
     //document.getElementById('box').innerHTML = 'A';
+
+
     
     });
 
