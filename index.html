@@ -9,15 +9,49 @@
     
 </head>
 <body>
-   
+
+    
     
 
-
+    <div id = "div2" >2</div>
 <div  id = "box" ></div>
 
+
 <script>
+
+//div2 container
+
+
+let div1 = document.createElement("div");
+    div1.style = "background-color: red";
+    div1.className = "divClass1";
+    div1.style.width = "5rem";
+    div1.style.height = "5rem";
+    div1.style.position = "absolute";
     
-    let letters = [];
+    div1.style.fontSize = "2rem";
+    div1.style.text = "decoration underline";
+    //div1.style = "border-style:solid;";
+    //div1.style.width = ".55rem";//
+    //div1.style.top = "9rem";
+    
+    //div1.style = "border-bottom: 1px solid;";
+
+    let span1 = document.createElement("span");
+    span1.style.textDecoration = "underline";
+
+
+    let cursorContainer = document.createElement("div");
+
+    span1.appendChild(div1)
+    cursorContainer.appendChild(div1);
+    div2.appendChild(cursorContainer);
+    
+
+
+    
+    var gPositionX = 0;
+    var letters = [];
     class textbox{
 
         constructor(){
@@ -36,7 +70,12 @@
     document.addEventListener('keydown' , function(e){
     //document.write(event.code);
 
+    gPositionX++;
     
+    
+    
+
+
     gCounter++;
     
     let keynum;
@@ -53,7 +92,16 @@
 
     
     nextLetter = (String.fromCharCode(keynum));
-    
+   
+
+    if(nextLetter == '0')
+    {
+        alert(nextLetter);
+        advanceArrayOneTime();
+        insertCharacter(gCounter-1 , nextLetter);
+
+    }
+
     if (nextLetter == ".")
     {
         
@@ -61,7 +109,16 @@
         return(-1);
     }
 
+ 
+    let a = 'a';
+    let uscore = '\u0332';
+    
+    //let s = uscore + a;
+
+    alert(uscore);
+
     letters.push(nextLetter);
+    
 
     
     lettersWithoutCommas = letters.join("");
@@ -75,10 +132,15 @@
         
     }
 
+    string3 = "<u>" + lettersWithoutCommas[0] +  "</u>";
+
         
-    
+    alert(lettersWithoutCommas);
     //let str = toString(letters);
-    document.getElementById('box').innerHTML = lettersWithoutCommas;
+    //document.getElementById('box').innerHTML = "<u>{a}</U>";
+        document.getElementById('box').innerHTML = string3;
+
+    //document.getElementById('box').innerHTML = 'A';
     
     });
 
@@ -111,21 +173,68 @@
     
 
 
-function insertCharacter(indexToInsertAt ,valueOfDeleted){
+function insertCharacter(indexToInsertAt ,valueOfInsert){
 
     //insert character into array
-    //move all breaks back one
-    lettersWithoutCommas.splice(indexRoInsertAt, 0, valueOfDeleted );
+    //move all breaks back one with swap
+    advanceArrayOneTime(indexToInsertAt);
+
+    length = gCounter + 1;
+
+    
+        
+
+    letters.splice(1, 0, valueOfInsert );
+    lettersWithoutCommas = letters.join("");
 
     for(i = 0 ; i < length ; i++)
     {
         if (lettersWithoutCommas == '<br>'){
         // swap <br> with value right before
-
+        swapBreak(length)
         }
 
     }
 }
+
+function swapBreak(breakPosition){
+    let holder;
+    lettersWithoutCommas[oneBeforeBreak] = lettersWithoutCommas[breakPosition-1]
+    
+    holder = lettersWithoutCommas[oneBeforeBreak];
+    lettersWithoutCommas[oneBeforeBreak]= lettersWithoutCommas[breakPosition];
+    lettersWithoutCommas[breakPosition] = holder;
+
+}
+
+function advanceArrayOneTime(){
+
+    for(i = 0; i < gCounter-3 ; i++)
+    {
+        if(i == gCounter)
+        {
+            //break;
+        }
+        
+    }
+    
+    letters[i] = '';
+    console.log(letters, i, gCounter);
+    
+    
+}
+
+    
+function backSpace(){
+    gCounter = 0;
+    gPostionX--;
+    gPositionY = 0;
+    
+}
+    
+    
+
+
 </script>
 
 

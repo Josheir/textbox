@@ -1,3 +1,6 @@
+.visibledevice {display:none;}
+.visible
+
 body{
 
     font-size: 6;
@@ -5,14 +8,31 @@ body{
 .html{
 
     font-size: 6;
+    max-width: 1100px;
 }
 #box
 {
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: whitesmoke;
     background-color:grey;
-    width:620px;
-    height:500px;
+    width:250px;
+    height: 25%;
     color: blue;
     font-family: monospace;
+    margin: auto;
+    margin-top:2rem;
+    
+}
+
+
+
+
+
+
+.underline{
+    font-size: 2rem;
+    border-style:solid;
+    width: .25rem;
+    color: rgb(0, 0, 0);
+    
 }
