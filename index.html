@@ -22,6 +22,7 @@
     
     
     <div id = "relative" ></div>
+    <div id = "cursor" ></div>
 
     
     
@@ -34,7 +35,7 @@
 
 <script>
 
-relative.style.display='none';
+
 
 //div2 container
 
@@ -58,6 +59,7 @@ let div1 = document.createElement("div");
     
     var gPositionX = 0;
     var letters = [];
+    var gWidth = 1;
     class textbox{
 
         constructor(){
@@ -72,9 +74,11 @@ let div1 = document.createElement("div");
 
     let gCounter = 1;
     let lettersWithoutCommas = "";
-
+    let cursorLocation = 2.5; 
+    let gWidthFlag = 1;
+    let gNum = 0;
     document.addEventListener('keydown' , function(e){
-        relative.style.display='block';
+        cursor.style.display='block';
 
 
     gPositionX++;
@@ -156,13 +160,52 @@ let key = e.key;
     }
 
     
-    
+   
+        if(gWidthFlag == 1)
+        {
+            gNum = gNum + 0;
 
+            gWidth = gNum.toString();
+            gWidthFlag++;
+            alert("1");
+        }
+
+        else if(gWidthFlag == 2)
+        {
+            gNum = gNum + 5;
+
+            gWidth = gNum.toString();
+            gWidthFlag++;
+            alert("2");
+        }
+
+        else{
+            gNum = gNum + 5.3;
+
+            gWidth = gNum.toString();
+            
+        }        
+
+       
+
+        /*if(gWidthFlag == 2)
+        {
+            gWidth = 7;
+
+        }
+        else{
+            gWidth = 5;
+        }
+        */
         
-    
         //document.getElementById('box').innerText = lettersWithoutCommas;
         document.getElementById('relative').innerText = lettersWithoutCommas;
+        relativeElement = document.getElementById('cursor');
+        relativeElement.setAttribute("style", 'left:' + gWidth + 'px');
         //document.getElementById('box').innerHTML = string3;
+       
+       
+        cursorLocation=cursorLocation+6.5;
 
     
 

@@ -18,16 +18,18 @@ body{
 
 #box
 {
-    font-size: .6rem;
+    
     
     background-color:rgba(255,255,255,0.1);
-    width:200px;
-    height: 30%;
+    width:230px;
+    height: 200px;
     color: black;
     font-family: monospace;
     
+    margin: auto;
     margin-top: 2rem;
     margin-bottom: 0rem;
+    
     
    
     
@@ -37,15 +39,23 @@ body{
 
 #relative{
     
-    border-bottom: .06rem solid rgb(255, 0, 225);
-    width:.3rem;
+    
+    
     color: black;
-    font-size: .6rem;
-    position: relative;
+    font-size: .8rem;
+   
     
    
     
     
+}
+
+#cursor{
+    border-bottom: .1rem solid rgb(255, 0, 225);
+    position: relative;
+    width: 8px;
+    
+
 }
 
 /*
