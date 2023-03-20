@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="box.css">
+    
+    
+
 
     
 </head>
@@ -12,14 +15,15 @@
 
     
     
-
-    <div id = "div2" >2</div>
+    
+    
 <div  id = "box" >
     
-    <p>fadjlslfd;asla;dfl;</p>
     
+    <div id = "relative" >A</div>
 
-    <div  class = "relative" ></div>
+    
+    
 
 </div>
 
@@ -31,7 +35,7 @@
 
 //div2 container
 
-
+/*
 let div1 = document.createElement("div");
     div1.style = "background-color: red";
     div1.className = "divClass1";
@@ -41,21 +45,10 @@ let div1 = document.createElement("div");
     
     div1.style.fontSize = "2rem";
     div1.style.text = "decoration underline";
-    //div1.style = "border-style:solid;";
-    //div1.style.width = ".55rem";//
-    //div1.style.top = "9rem";
-    
-    //div1.style = "border-bottom: 1px solid;";
-
-    let span1 = document.createElement("span");
-    span1.style.textDecoration = "underline";
+  */  
 
 
-    let cursorContainer = document.createElement("div");
-
-    span1.appendChild(div1)
-    cursorContainer.appendChild(div1);
-    div2.appendChild(cursorContainer);
+  
     
 
 
@@ -66,8 +59,8 @@ let div1 = document.createElement("div");
 
         constructor(){
 
-            let box = document.createElement("div");
-            box.className = "box-Class";     
+            //let box = document.createElement("div");
+            //box.className = "box-Class";     
             }
 
         
@@ -133,7 +126,7 @@ let div1 = document.createElement("div");
     
     lettersWithoutCommas = letters.join("");
     
-    if (gCounter %35 == 1) getelee
+    if (gCounter %35 == 1)
     {
         
         letters.push('<br>');
@@ -143,22 +136,15 @@ let div1 = document.createElement("div");
     }
 
     
-    string3 = "<span><u>" + lettersWithoutCommas +  "</u></span>";
+    
 
         
-    //alert(lettersWithoutCommas);
-    //let str = toString(letters);
-    //document.getElementById('box').innerHTML = "<u>{a}</U>";
-        //let id = "box";
-        //innertext 
-        //;
-        //s.value = "qwert"; 
-        document.getElementById('box').innerText = 'awq';
-
+    
+        //document.getElementById('box').innerText = lettersWithoutCommas;
+        document.getElementById('relative').innerText = lettersWithoutCommas;
         //document.getElementById('box').innerHTML = string3;
 
-    //document.getElementById('box').innerHTML = 'A';
-
+    
 
     
     });
