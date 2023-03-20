@@ -90,28 +90,7 @@ let key = e.key;
 
     gCounter++;
     
-    //alert(key);
-    //document.getElementById("demo").innerText = key;
-
-
-    //log(`key "${e.key}" pressed [event: keydown]`);
-    //var key = e.which || e.keyCode;
-    //alert(key);
     
-   // alert("key: " + e.code + ", code: " + e.charcode);
-    
-    //return(1);
-    /*
-    let keynum;
-    if(window.e) {
-        keynum = e.keyCode;
-    }
-    else if(e.which){
-        keynum = e.which;
-
-    }
-    keynum = e.which;
-*/
     
 
     
@@ -150,7 +129,10 @@ let key = e.key;
     
     lettersWithoutCommas = letters.join("");
     
-    if (gCounter %35 == 1)
+
+
+    
+    if (gCounter %32 == 1)
     {
         
         letters.push('<br>');
@@ -158,6 +140,7 @@ let key = e.key;
         
         
     }
+    
 
     
    
@@ -167,48 +150,33 @@ let key = e.key;
 
             gWidth = gNum.toString();
             gWidthFlag++;
-            alert("1");
+            //alert("1");
         }
 
         else if(gWidthFlag == 2)
         {
-            gNum = gNum + 5;
+            gNum = gNum + 7;
 
             gWidth = gNum.toString();
             gWidthFlag++;
-            alert("2");
+            //alert("2");
         }
 
         else{
-            gNum = gNum + 5.3;
+            gNum = gNum + 7.05;
 
             gWidth = gNum.toString();
+           
             
-        }        
+        }   
+          
 
-       
-
-        /*if(gWidthFlag == 2)
-        {
-            gWidth = 7;
-
-        }
-        else{
-            gWidth = 5;
-        }
-        */
         
         //document.getElementById('box').innerText = lettersWithoutCommas;
         document.getElementById('relative').innerText = lettersWithoutCommas;
         relativeElement = document.getElementById('cursor');
         relativeElement.setAttribute("style", 'left:' + gWidth + 'px');
-        //document.getElementById('box').innerHTML = string3;
-       
-       
-        cursorLocation=cursorLocation+6.5;
-
-    
-
+        
     
     });
 
